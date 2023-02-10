@@ -1,6 +1,7 @@
 <template>
-    <div>
-        There will be my projects listed
+    <div id="projects-div">
+        <h1>Projects</h1>
+        There will be projects in which I was involved
     </div>
 </template>
 

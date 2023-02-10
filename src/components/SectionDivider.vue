@@ -8,7 +8,6 @@
 
 <style>
 .divider:after, .divider:before {
-  position: relative;
   margin-top: 2px;
   width: 50%;
   height: 2px;

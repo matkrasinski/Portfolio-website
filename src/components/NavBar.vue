@@ -13,9 +13,26 @@
         <nav id="burger-popup">
             <ol id="popup-list">
                 <li class="bp-item"><a>About me</a></li>
-                <li class="bp-item"><a>Projects</a></li>
-                <li class="bp-item"><a>Interests</a></li>
-                <li class="bp-item"><a>Goals</a></li>
+                <li class="bp-item">
+                    <a href="#projects-div" 
+                        onclick="document.getElementById('burger-menu').classList.toggle('change')" 
+                        @click="showPopup()">
+                        Projects
+                    </a>
+                </li>
+                <li class="bp-item">
+                    <a href="#interests-div" onclick="document.getElementById('burger-menu').classList.toggle('change')" 
+                        @click="showPopup()">
+                        Interests
+                    </a>
+                </li>
+                <li class="bp-item">
+                    <a href="#goals-div" 
+                        onclick="document.getElementById('burger-menu').classList.toggle('change')" 
+                        @click="showPopup()">
+                        Goals
+                    </a>
+                </li>
             </ol>
         </nav>
     </nav>
@@ -38,10 +55,8 @@ export default {
             if (popup.style.opacity !== "1") {
                 popup.style.transition = "1s";
                 popup.style.opacity = "1"
-                console.log(this.isMobile)
-                if (this.isMobile) {
+                    if (this.isMobile) {
                     popup.style.width = "80%"
-                    // popup.style.height = "100vh"
                 } else {
                     popup.style.width = "25%"
                 }
@@ -95,6 +110,7 @@ export default {
         transition: 0.5s;
         backdrop-filter: blur(20px);
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
     }
     .menu-container {
         position: absolute;
@@ -103,7 +119,8 @@ export default {
     }
     ol a {
         padding-right: 8vw;
-        font-size: 100%
+        font-size: 100%;
+        text-decoration: none;
     }
 
     .logo-container {
@@ -113,7 +130,7 @@ export default {
     a img {
         position: absolute;
         top: 2%;
-        left: 0;
+        left: 5%;
         width: 10vw;
         height: 10vh;
     }
