@@ -1,55 +1,48 @@
 <template>
-    <NavBar/>
-    <InfoSection/>
-    <SectionDivider/>
-    <ProjectsSection/>
-    <SectionDivider/>
-    <InterestsSection/>
-    <SectionDivider/>
-    <GoalsSection/>
-    <SectionDivider/>
-    <FooterComp/>
+    <div class="bg-gradient-to-br from-slate-50 via-gray-300 to-slate-200">
+
+      <default-navbar v-if="true"> </default-navbar>
+      <welcome-component v-if="true"></welcome-component>
+      <career-path v-if="true"></career-path>
+      
+      <projects-list v-if="true" class="mb-8"></projects-list>
+      
+      <skills-section v-if="true"></skills-section>
+      
+      <contact-form></contact-form>
+    </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
-import InfoSection from './components/InfoSection.vue'
-import ProjectsSection from './components/ProjectsSection.vue'
-import SectionDivider from './components/SectionDivider.vue'
-import InterestsSection from './components/InterestsSection.vue'
-import GoalsSection from './components/GoalsSection.vue'
-import FooterComp from './components/FooterComp.vue'
+import DefaultNavbar from './components/layout/DefaultNavbar.vue';
+import ProjectsList from './components/ProjectsList.vue';
+import WelcomeComponent from './components/WelcomeComponent.vue'
+import CareerPath from './components/CareerPath.vue';
+import ContactForm from './components/ContactForm.vue';
+import SkillsSection from './components/SkillsSection.vue';
+
 
 export default {
   name: 'App',
   components: {
-    NavBar, 
-    InfoSection,
-    ProjectsSection,
-    SectionDivider,
-    InterestsSection,
-    GoalsSection,
-    FooterComp
+    DefaultNavbar,  
+    ProjectsList,
+    WelcomeComponent,
+    CareerPath,
+    ContactForm,
+    SkillsSection
   }
-
 }
 </script>
 
-<style>
-html {
-  scroll-behavior: smooth;
+<style scoped>
+.container {
+  flex: 1;
 }
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  /* margin-top: 60px; */
-  margin-bottom: 0;
-}
-section {
-  padding: 150px 80px 80px;
-}
+
+* {
+    font-family: 'Inter', sans-serif;
+  }
+
 
 </style>

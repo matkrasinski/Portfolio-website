@@ -1,24 +1,2 @@
-# portfolio-website
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# e-driving-school
+A website repository for a professional driving school, providing information, booking options, and resources for students and learners.
